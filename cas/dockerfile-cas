@@ -1,0 +1,5 @@
+FROM apereo/cas:latest
+
+
+# Port d’écoute
+EXPOSE 8080
