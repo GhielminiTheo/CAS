@@ -10,4 +10,15 @@ services:
     volumes:
       - ./nginx/certs:/etc/ssl/certs
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - cas-server
 
+  cas-server:
+    image: apereo/cas:latest
+    container_name: cas-server
+    ports:
+      - "8080:8080"
+    environment:
+      - CAS_LOG_LEVEL=INFO
+    volumes:
+      - ./cas:/etc/cas

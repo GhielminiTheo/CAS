@@ -1,0 +1,2 @@
+cas.server.name=https://yourdomain.com
+cas.server.prefix=${cas.server.name}/cas
