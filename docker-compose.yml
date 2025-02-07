@@ -10,13 +10,13 @@ services:
       MYSQL_ROOT_PASSWORD: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress
-    volumes:
+    volumes: 
       - db_wordpress:/var/lib/mysql
     networks:
       - app-network
 
   wordpress:
-    depends_on:
+    depends_on: 
       - db_wordpress
     image: wordpress:latest
     container_name: wordpress
@@ -60,7 +60,7 @@ services:
       MOODLE_DATABASE_HOST: db_moodle
       MOODLE_DATABASE_PORT_NUMBER: 3306
       MOODLE_DATABASE_USER: moodle
-      MOODLE_DATABASE_PASSWORD: moodle
+      MOODLE_DATABASE_PASSWORD: moodle  
       MOODLE_DATABASE_NAME: moodle
     volumes:
       - moodle:/bitnami/moodle
@@ -84,7 +84,7 @@ services:
       LDAP_ADMIN_PASSWORD: pass123
       LDAP_CONFIG_PASSWORD: pass123
       LDAP_BASE_DN: dc=cpnv-cas1,dc=ch
-      LDAP_READONLY_USER: "true"
+      LDAP_READONLY_USER: true
       LDAP_READONLY_USER_USERNAME: user-ro
       LDAP_READONLY_USER_PASSWORD: pass123
       LDAP_SEED_INTERNAL_LDIF_PATH: /openldap/ldif
@@ -99,7 +99,7 @@ services:
       - "8010:80"
     environment:
       PHPLDAPADMIN_LDAP_HOSTS: ldapserver
-      PHPLDAPADMIN_HTTPS: "false"
+      PHPLDAPADMIN_HTTPS: false
     depends_on:
       - openldap
     networks:
@@ -112,7 +112,7 @@ services:
       - wordpress
       - moodle
     ports:
-      - "80:80"
+      - "80:80"      
       - "443:443"
     volumes:
       - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
@@ -155,7 +155,7 @@ services:
       KC_HTTPS_CERTIFICATE_FILE: /opt/keycloak/conf/cert.crt
       KC_HTTPS_CERTIFICATE_KEY_FILE: /opt/keycloak/conf/cert.key
       KEYCLOAK_ADMIN: admin
-      KEYCLOAK_ADMIN_PASSWORD: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin  
     ports:
       - "8443:8443"   # Expose HTTPS
     networks:
@@ -171,4 +171,3 @@ volumes:
 
 networks:
   app-network:
-
