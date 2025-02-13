@@ -78,8 +78,8 @@ services:
     volumes:
       - ./ldif:/openldap/ldif
     environment:
-      LDAP_ORGANISATION: cpnv-cas1
-      LDAP_DOMAIN: cpnv-cas1.ch
+      LDAP_ORGANISATION: cpnv-cas06
+      LDAP_DOMAIN: cpnv-cas06.ch
       LDAP_ADMIN_USERNAME: admin
       LDAP_ADMIN_PASSWORD: pass123
       LDAP_CONFIG_PASSWORD: pass123
