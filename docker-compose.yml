@@ -1,4 +1,4 @@
-version: '3.8'
+# version: '3.8'
 
 services:
   db_wordpress:
@@ -83,7 +83,7 @@ services:
       LDAP_ADMIN_USERNAME: admin
       LDAP_ADMIN_PASSWORD: pass123
       LDAP_CONFIG_PASSWORD: pass123
-      LDAP_BASE_DN: dc=cpnv-cas1,dc=ch
+      LDAP_BASE_DN: dc=cpnv-cas06,dc=ch
       LDAP_READONLY_USER: true
       LDAP_READONLY_USER_USERNAME: user-ro
       LDAP_READONLY_USER_PASSWORD: pass123

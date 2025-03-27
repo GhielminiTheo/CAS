@@ -12,27 +12,27 @@ ou: People
 
 # --- People ----------------------------------
 
-dn: cn=user01,ou=People,dc=cpnv-cas06,dc=ch
+dn: cn=user1,ou=People,dc=cpnv-cas06,dc=ch
 objectClass: person
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: top
-cn: user01
-givenname: User01
-sn: user01
-uid: user01
+cn: user1
+givenname: User1
+sn: user1
+uid: user1
 userpassword: Pa$$w0rd
 
 
-dn: cn=user02,ou=People,dc=cpnv-cas06,dc=ch
+dn: cn=user2,ou=People,dc=cpnv-cas06,dc=ch
 objectClass: person
 objectClass: inetOrgPerson
 objectClass: organizationalPerson
 objectClass: top
 cn: user02
-givenname: User02
-sn: user02
-uid: user02
+givenname: User2
+sn: user2
+uid: user2
 userpassword: Pa$$w0rd
 
 
@@ -44,13 +44,13 @@ objectClass: groupofuniquenames
 objectClass: top
 ou: Groups
 cn: Administrator
-uniquemember: cn=user01,ou=People,dc=cpnv-cas06,dc=ch
-uniquemember: cn=user02,ou=People,dc=cpnv-cas06,dc=ch
+uniquemember: cn=user1,ou=People,dc=cpnv-cas06,dc=ch
+uniquemember: cn=user2,ou=People,dc=cpnv-cas06,dc=ch
 
 dn: cn=Developers,ou=Groups,dc=cpnv-cas06,dc=ch
 objectClass: groupofuniquenames
 objectClass: top
 ou: Groups
 cn: Administrator
-uniquemember: cn=user01,ou=People,dc=cpnv-cas06,dc=ch
-uniquemember: cn=user02,ou=People,dc=cpnv-cas06,dc=ch
+uniquemember: cn=user1,ou=People,dc=cpnv-cas06,dc=ch
+uniquemember: cn=user2,ou=People,dc=cpnv-cas06,dc=ch
